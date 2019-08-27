@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+p4
+</title>
+<script type="text/javascript">
+function vowe(st)
+{
+var pos;
+if(isNaN(st))
+{
+if(pos=st.search(/[aeiouAEIOU]/))
+{if(pos>=0){
+alert("position of vowel is"+pos);
+}
+else
+{
+alert("pattern is not found");
+}
+}}
+else
+{
+var temp=0,rev=0;
+var n=parseInt(st);
+while(n>0)
+{
+temp=n%10;
+rev=rev*10+temp;
+n=n/10;
+n=parseInt(n);
+}
+alert("reversed number is"+rev);
+}
+}
+</script>
+</head>
+<body>
+<form>
+<p>enter the text</p>
+<input type="text" id="vow"/>
+
+<input type="button" value="submit" onclick="vowe(vow.value)"/>
+</form>
+</body>
+</html>
