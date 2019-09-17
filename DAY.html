@@ -1,0 +1,75 @@
+<!document html>
+<html>
+<head>
+<style>
+#myp1{
+border-radius:100%;
+}
+#bd{
+background:black;
+}
+</style>
+</head>
+<body id="bd">
+<center>
+<div id="myp1"></p>
+<p id="myp2"></p>
+</center>
+<center><p id="r"></p></center>
+</body>
+<script>
+var size=10;
+document.getElementById("myp1").style.background='yellow';
+document.getElementById("bd").style.background='skyblue';
+document.getElementById("r").innerHTML="GOOD MORNING";
+
+document.getElementById("r").style.color='white';
+var mywait1=setInterval(GrowText1,15);
+function GrowText1()
+{
+if(size<250)
+{
+size=size+1;
+document.getElementById("r").style.fontSize=(size/3+'pt');
+
+document.getElementById("myp1").style.height=(size+'pt');
+document.getElementById("myp1").style.width=(size+'pt');
+}
+else
+{
+document.getElementById("myp1").style.background='white';
+document.getElementById("bd").style.background='black';
+document.getElementById("r").innerHTML="GOOD  NIGHT";
+
+document.getElementById("r").style.color="white";
+clearInterval(mywait1);
+mywait1=setInterval(shrinktext1,15);
+}
+}
+function shrinktext1()
+{
+if(size>5)
+{
+size=size-1;
+document.getElementById("r").style.fontSize=(size/3+'pt');
+
+document.getElementById("myp1").style.height=(size+'pt');
+document.getElementById("myp1").style.width=(size+'pt');
+}
+else
+{
+document.getElementById("myp1").style.background='yellow';
+document.getElementById("bd").style.background='skyblue';
+document.getElementById("r").innerHTML="GOOD  MORNING";
+
+document.getElementById("r").style.color="white";
+
+document.getElementById("myp1").style.height=(size+'pt');
+document.getElementById("myp1").style.width=(size+'pt');
+clearInterval(mywait1);
+mywait1=setInterval(GrowText1,15);
+}
+
+}
+</script>
+</html>
