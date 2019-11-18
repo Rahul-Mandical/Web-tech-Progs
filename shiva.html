@@ -1,0 +1,49 @@
+<!document html>
+<html>
+<body id="bd">
+<p id="fontSize"></p>
+<p id="myp1"></p>
+</body>
+<script>
+var size=10;
+var c1=20,c2=250,c3=200;
+document.getElementById("myp1").innerHTML="GOOD MORNING";
+document.getElementById("myp1").style.color='black';
+document.getElementById("bd").style.background="yellow";
+var mywait1=setInterval(GrowText1,2);
+function GrowText1()
+{
+if(size<50)
+{
+size=size+1;
+document.getElementById("myp1").style.fontSize=(size+'pt');
+}
+else
+{
+document.getElementById("bd").style.background="black";
+document.getElementById("myp1").innerHTML="GOOD  NIGHT";
+document.getElementById("myp1").style.color="white";
+clearInterval(mywait1);
+mywait1=setInterval(shrinktext1,20);
+}
+document.getElementById("fontSize").innerHTML=('fontSize='+size+'pt');
+}
+function shrinktext1()
+{
+if(size>5)
+{
+size=size-1;
+document.getElementById("myp1").style.fontSize=(size+'pt');
+}
+else
+{
+document.getElementById("bd").style.background="yellow";	
+document.getElementById("myp1").innerHTML="GOOD MORNING";
+document.getElementById("myp1").style.color='c1'+'c2'+'c3';
+clearInterval(mywait1);
+mywait1=setInterval(GrowText1,20);
+}
+document.getElementById("fontSize").innerHTML=('fontSize:'+size+'pt');
+}
+</script>
+</html>

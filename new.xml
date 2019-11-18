@@ -1,0 +1,32 @@
+<?xml-stylesheet type="text/css" href="p5.css"?>
+<!DOCTYPE html>
+<html>
+<head>
+<students>
+	<student>
+	<usn>1jb17cs432</usn>
+	<name>shivakumar n</name>
+	<college>sjbit</college>
+	<branch>cse</branch>
+	<year>2020</year>
+	<email>shivakumarnarayana00@gmail.com</email>
+	</student>
+	<student>
+	<usn>1jb17cs433</usn>
+	<name>sowmya B</name>
+	<college>sjbit</college>
+	<branch>cse</branch>
+	<year>2020</year>
+	<email>sowmya@gmail.com</email>
+	</student>
+	<student>
+	<usn>1jb17cs431</usn>
+	<name>shekar</name>
+	<college>sjbit</college>
+	<branch>cse</branch>
+	<year>2020</year>
+	<email>shekar@gmail.com</email>
+	</student>
+</students>
+</head>
+</html>

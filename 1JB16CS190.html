@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8/>
+<title>Java Script Calculator prog</title>
+<script type="text/javascript">
+function multiplyBy()
+{
+num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 * num2;
+}
+function divideBy()
+{
+num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+function addBy()
+{
+num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 + num2;
+}
+function subBy()
+{
+num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 - num2;
+}
+</script>
+<style type="text/css">
+body {margin:30px;}
+</style>
+</head>
+<body>
+<center>
+<table border='1'>
+<tr>
+<td>1st Number:</td><td><input type="text" id="firstNumber" size="9"/></td>
+<td>2st Number:</td><td><input type="text" id="secondNumber" size="9"/></td>
+</tr>
+<tr>
+<td align="center"><input type="button" onClick="multiplyBy()" value="multiply"/></td>
+<td align="center"><input type="button" onClick="divideBy()" value="divide"/></td>
+<td align="center"><input type="button" onClick="addBy()" value="addition"/></td>
+<td align="center"><input type="button" onClick="subBy()" value="subtract"/></td>
+</tr>
+<tr>
+<td><p>the result is:</td>
+<td colspan="3"><span id="result"></span></td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+
+
